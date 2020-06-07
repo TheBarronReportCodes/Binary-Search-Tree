@@ -1,0 +1,17 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "Sort legos by color and size",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.2.0"
+  }
+}
