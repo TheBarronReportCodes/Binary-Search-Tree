@@ -3,15 +3,15 @@ var lego = require('../legos');
 const Brick = lego.Brick;
 
 describe('testBrickConstructor', function() {
-    it('assert that size of brick is of type int', function() {
+    it('assert that size of brick is of type number', function() {
 	var brick1 = new Brick(1,"test");
 	var result = brick1.size;
-      assert.equal(result, 'int');
+      assert.equal(typeof result, 'number');
     });
     it('assert that color of brick is of type string', function() {
 	var brick1 = new Brick(1,"test");
 	var result = brick1.color
-      assert.typeOf(result, 'string');
+      assert.equal(typeof result, 'string');
     });
     it('assert that value of size of brick is 1', function() {
 	var brick1 = new Brick(1, "test");
