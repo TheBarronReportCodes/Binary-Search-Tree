@@ -23,4 +23,14 @@ describe('testBrickConstructor', function() {
 	var result = brick1.color
       assert.equal(result, "test");
     });
+    it('assert that value of size of brick is 10', function() {
+	var brick1 = new Brick(10, "red");
+	var result = brick1.size;
+      assert.equal(result, 10);
+    });
+    it('assert that value of color of brick is yellow', function() {
+	var brick1 = new Brick(67, "yellow");
+	var result = brick1.color
+      assert.equal(result, "yellow");
+    });
 });
