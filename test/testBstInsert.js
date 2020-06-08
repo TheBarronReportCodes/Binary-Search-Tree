@@ -56,4 +56,28 @@ describe('testBST', function() {
       assert.equal(tree0.root.right.data, brick1);
       assert.equal(tree0.root.left.data, brick2);
     });
+
+    it('assert that nine bricks(sizes 65, 102, and 33) inserted into BST are arranged in appropriate order, starting with brick size 50 as the root and brick size 10 at the bottom and on the left hand side of the tree', function() {
+	var brick0 = new Brick(50,"red");
+	var brick1 = new Brick(86,"red");
+	var brick2 = new Brick(41,"red");
+	var brick3 = new Brick(69,"red");
+	var brick4 = new Brick(77,"red");
+	var brick5 = new Brick(2,"red");
+	var brick6 = new Brick(27,"red");
+	var brick7 = new Brick(24,"red");
+	var brick8 = new Brick(10,"red");
+	var tree0 = new BST();
+	tree0.insert(brick0);
+	tree0.insert(brick1);
+	tree0.insert(brick2);
+	tree0.insert(brick3);
+	tree0.insert(brick4);
+	tree0.insert(brick5);
+	tree0.insert(brick6);
+	tree0.insert(brick7);
+	tree0.insert(brick8);
+      assert.equal(tree0.root.right.data, brick1);
+      assert.equal(tree0.root.left.data, brick2);
+    });
 });
