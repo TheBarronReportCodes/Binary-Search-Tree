@@ -1,6 +1,8 @@
 module.exports.Node = Node;
 module.exports.BST = BST;
 
+/* Creates a Node for the BST
+*/
 function Node(data, left, right) {
 this.data = data;
 this.left = left;
@@ -8,15 +10,21 @@ this.right = right;
 this.show = show;
 }
 
+/* Displays the data in a node
+*/
 function show() {
 return this.data;
 }
 
+/* Creates an empty binary search tree
+*/
 function BST() {
 this.root = null
 this.insert = insert;
 }
 
+/* Adds a node into a spot on the binary based on the described algorithm
+*/
 function insert(data) {
 	var n = new Node(data, null, null);
 	if (this.root == null) {
