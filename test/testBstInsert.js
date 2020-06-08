@@ -36,12 +36,24 @@ describe('testBST', function() {
       assert.equal(tree0.root.left.data, brick1);
     });
 
-    it('assert that two bricks(sizes 65 and) inserted into BST end with brick object of size 102 as the root nodes right child', function() {
+    it('assert that two bricks(sizes 65 and 102) inserted into BST end with brick object of size 102 as the root nodes right child', function() {
 	var brick0 = new Brick(65,"red");
 	var brick1 = new Brick(102,"red");
 	var tree0 = new BST();
 	tree0.insert(brick0);
 	tree0.insert(brick1);
       assert.equal(tree0.root.right.data, brick1);
+    });
+
+    it('assert that three bricks(sizes 65, 102, and 33) inserted into BST end with brick object of size 102 as the root nodes right child and brick object of size 33 as the root nodes left child', function() {
+	var brick0 = new Brick(65,"red");
+	var brick1 = new Brick(102,"red");
+	var brick2 = new Brick(33,"red");
+	var tree0 = new BST();
+	tree0.insert(brick0);
+	tree0.insert(brick1);
+	tree0.insert(brick2);
+      assert.equal(tree0.root.right.data, brick1);
+      assert.equal(tree0.root.left.data, brick2);
     });
 });
