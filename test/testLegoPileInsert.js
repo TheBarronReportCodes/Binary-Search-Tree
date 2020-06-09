@@ -19,12 +19,30 @@ describe('testLegoPileInsert', function() {
 		pile.insert(brick0);
       		assert.equal(pile.datastore["white"].root.data, brick0);
     		});
-    });
+    	});
+	describe('insert one brick of each color', function() {
+    		it('assert that all six bricks inserted are inserted into the root node of the BST associated with their respective color', function() {
+		var brick0 = new Brick(50, "white"); 
+		var brick1 = new Brick(50, "green"); 
+		var brick2 = new Brick(50, "yellow"); 
+		var brick3 = new Brick(50, "black"); 
+		var brick4 = new Brick(50, "red"); 
+		var brick5 = new Brick(50, "blue"); 
+		var pile = new LegoPile();
 
-    it('assert that the brick inserted is inserted into the root node of the BST associated with "white"', function() {
-	var brick0 = new Brick(60, "white"); 
-	var pile = new LegoPile();
-	pile.insert(brick0);
-      assert.equal(pile.datastore["white"].root.data, brick0);
-    });
+		pile.insert(brick0);
+		pile.insert(brick1);
+		pile.insert(brick2);
+		pile.insert(brick3);
+		pile.insert(brick4);
+		pile.insert(brick5);
+
+      		assert.equal(pile.datastore["white"].root.data, brick0);
+		assert.equal(pile.datastore["green"].root.data, brick1);
+		assert.equal(pile.datastore["yellow"].root.data, brick2);
+		assert.equal(pile.datastore["black"].root.data, brick3);
+		assert.equal(pile.datastore["red"].root.data, brick4);
+		assert.equal(pile.datastore["blue"].root.data, brick5);
+    		});
+	});
 });
