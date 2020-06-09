@@ -1,7 +1,7 @@
 module.exports.Brick = Brick;
 module.exports.LegoPile = LegoPile;
 
-var bst = require('../bst');
+var bst = require('./bst');
 const BST = bst.BST;
 
 /* Creates a brick object of a specific size and color
@@ -26,8 +26,8 @@ this.insert = insert;
 */
 function add(key, value) {
 var value = new BST();
-if (key == "red"||key == "green"||key == "blue"||key == "yellow"||key == "black"||key == "white"||) {
-this.datastore[key] = value;
+if (key == "red"||key == "green"||key == "blue"||key == "yellow"||key == "black"||key == "white") {
+	this.datastore[key] = value;
 }
 }
 
