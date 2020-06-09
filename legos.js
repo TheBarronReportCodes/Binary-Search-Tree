@@ -28,7 +28,7 @@ this.insert = insert;
 /* inserts a brick object into the appropriate colors BST
 */
 function insert(Brick) {
-	for (var key in this.dict) {
+	for (var key in this.datastore) {
 		if (Brick.color == key) {
 		this.datastore[key].insert(Brick);
 		}
