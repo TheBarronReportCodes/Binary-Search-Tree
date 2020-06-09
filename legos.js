@@ -11,50 +11,24 @@ this.size = size;
 this.color = color;
 }
 
-/* Creates a LegoPile where the pile contains bricks of different colors
+/* Creates a LegoPile where the pile contains multiple search trees assigned to different colors
 */
 function LegoPile() {
-this.add = add;
-this.datastore = new Array();
-this.find = find;
-this.remove = remove;
-this.showAll = showAll;
+this.datastore = {
+	"red" : new BST(),
+	"green" : new BST(),
+	"blue" : new BST(),
+	"yellow" : new BST(),
+	"black" : new BST(),
+	"white" : new BST()
+};
 this.insert = insert;
-}
-
-/* adds a specified value to the key. The key serves as a location inside of the datastore array. 
-*/
-function add(key) {
-var value = new BST();
-if (key == "red"||key == "green"||key == "blue"||key == "yellow"||key == "black"||key == "white") {
-	this.datastore[key] = value;
-}
-}
-
-/* finds and returns the value at the specified key
-*/
-function find(key) {
-return this.datastore[key];
-}
-
-/* delete the value at the specified key
-*/
-function remove(key) {
-delete this.datastore[key];
-}
-
-/* show all the keys and their value
-*/
-function showAll() {
-	for (var key in this.datastore) {
-	console.log(key + "->" + this.datastore[key]);
-	}
 }
 
 /* inserts a brick object into the appropriate colors BST
 */
 function insert(Brick) {
-	for (var key in this.datastore) {
+	for (var key in this.dict) {
 		if (Brick.color == key) {
 		this.datastore[key].insert(Brick);
 		}
