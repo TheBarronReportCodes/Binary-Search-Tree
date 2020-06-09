@@ -6,8 +6,11 @@ const LegoPile = lego.LegoPile
 
 describe('testLegoPileInsert', function() {
     it('', function() {
+	var brick0 = new Brick(50, "red"); 
 	var pile = new LegoPile();
-	console.log(pile);
-      assert.equal(tree0.root.data, brick0);
+	pile.add("red");
+	pile.insert(brick0);
+	console.log(pile.datastore);
+      assert.equal(pile.find("red").root.data, brick0);
     });
 });

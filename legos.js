@@ -24,7 +24,7 @@ this.insert = insert;
 
 /* adds a specified value to the key. The key serves as a location inside of the datastore array. 
 */
-function add(key, value) {
+function add(key) {
 var value = new BST();
 if (key == "red"||key == "green"||key == "blue"||key == "yellow"||key == "black"||key == "white") {
 	this.datastore[key] = value;
@@ -47,7 +47,7 @@ delete this.datastore[key];
 */
 function showAll() {
 	for (var key in this.datastore) {
-	print(key + "->" + this.datastore[key]);
+	console.log(key + "->" + this.datastore[key]);
 	}
 }
 
