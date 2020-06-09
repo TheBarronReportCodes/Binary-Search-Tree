@@ -57,7 +57,19 @@ describe('testLegoPileInsert', function() {
 		var brick5 = new Brick(82, "yellow"); 
 		var pile = new LegoPile();
 
+		pile.insert(brick0);
+		pile.insert(brick1);
+		pile.insert(brick2);
+		pile.insert(brick3);
+		pile.insert(brick4);
+		pile.insert(brick5);
 
+		assert.equal(pile.datastore["yellow"].root.data, brick0);
+		assert.equal(pile.datastore["yellow"].root.right.data, brick1);
+		assert.equal(pile.datastore["yellow"].root.right.right.data, brick2);
+		assert.equal(pile.datastore["yellow"].root.left.data, brick3);
+		assert.equal(pile.datastore["yellow"].root.left.left.data, brick4);
+		assert.equal(pile.datastore["yellow"].root.right.left.data, brick5);
     		});
 	});
 });
