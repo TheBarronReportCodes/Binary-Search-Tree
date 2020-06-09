@@ -25,7 +25,10 @@ this.insert = insert;
 /* adds a specified value to the key. The key serves as a location inside of the datastore array. 
 */
 function add(key, value) {
+var value = new BST();
+if (key == "red"||key == "green"||key == "blue"||key == "yellow"||key == "black"||key == "white"||) {
 this.datastore[key] = value;
+}
 }
 
 /* finds and returns the value at the specified key
