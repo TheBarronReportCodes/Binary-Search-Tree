@@ -77,7 +77,6 @@ describe('testBST', function() {
 	tree0.insert(brick6);
 	tree0.insert(brick7);
 	tree0.insert(brick8);
-console.log(tree0);
       assert.equal(tree0.root.right.data, brick1);
       assert.equal(tree0.root.left.data, brick2);
       assert.equal(tree0.root.right.left.data, brick3);
