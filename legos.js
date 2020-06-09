@@ -11,4 +11,9 @@ this.color = color;
 /* Creates a LegoPile where the pile contains bricks of different colors
 */
 function LegoPile(Brick) {
+this.add = add;
+this.datastore = new Array();
+this.find = find;
+this.remove = remove;
+this.showAll = showAll;
 }
