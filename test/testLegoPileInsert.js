@@ -20,6 +20,7 @@ describe('testLegoPileInsert', function() {
       		assert.equal(pile.datastore["white"].root.data, brick0);
     		});
     	});
+
 	describe('insert one brick of each color', function() {
     		it('assert that all six bricks inserted are inserted into the root node of the BST associated with their respective color', function() {
 		var brick0 = new Brick(50, "white"); 
@@ -43,6 +44,20 @@ describe('testLegoPileInsert', function() {
 		assert.equal(pile.datastore["black"].root.data, brick3);
 		assert.equal(pile.datastore["red"].root.data, brick4);
 		assert.equal(pile.datastore["blue"].root.data, brick5);
+    		});
+	});
+
+	describe('insert several bricks of one color', function() {
+    		it('assert that all six bricks insert all fall within the yellow BST only', function() {
+		var brick0 = new Brick(76, "yellow"); 
+		var brick1 = new Brick(159, "yellow"); 
+		var brick2 = new Brick(160, "yellow"); 
+		var brick3 = new Brick(48, "yellow"); 
+		var brick4 = new Brick(33, "yellow"); 
+		var brick5 = new Brick(82, "yellow"); 
+		var pile = new LegoPile();
+
+
     		});
 	});
 });
