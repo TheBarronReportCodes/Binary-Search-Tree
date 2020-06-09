@@ -23,6 +23,7 @@ this.datastore = {
 	"white" : new BST()
 };
 this.insert = insert;
+this.hasBrick = hasBrick;
 }
 
 /* inserts a brick object into the appropriate colors BST
@@ -33,4 +34,10 @@ function insert(Brick) {
 		this.datastore[key].insert(Brick);
 		}
 	}
+}
+
+/* checks whether the legoPile has a brick with the given size and color
+*/
+function hasBrick(size, color) {
+return find(color)
 }
