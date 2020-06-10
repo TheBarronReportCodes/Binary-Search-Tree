@@ -39,5 +39,48 @@ function insert(Brick) {
 /* checks whether the legoPile has a brick with the given size and color
 */
 function hasBrick(size, color) {
-return find(color)
+var binarySearchTree = find(color);
+findBrick(binarySearchTree, size);
+return findBrick(binarySearchTree, size) == Brick;
 }
+
+/* returns the binary search tree associated with the color(key)
+*/
+function findBinaryTree(key) {
+return this.datastore[key];
+}
+
+/* searches a binary tree for a specific size. if size is found the object is returned
+*/
+function findBrick(searchTree, size) {
+	if (searchTree.root == null) {
+	return null;
+	} else {
+		var current = searchTree.root;
+		var parent;
+		while (true) {
+			parent = current;
+			if (size < current.data.size) {
+				current = current.left;
+				if (current == null) {
+					break;
+				}
+			} else if (size < current.data.size) {
+				current = current.right;
+				if (current == null) {
+					break;
+				}
+			} else if (size == current.data.size) {
+				return current.data;
+			} 
+		}
+	}
+}
+
+
+
+
+
+
+
+
