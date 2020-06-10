@@ -24,6 +24,8 @@ this.datastore = {
 };
 this.insert = insert;
 this.hasBrick = hasBrick;
+this.findBinaryTree = findBinaryTree;
+this.findBrick = findBrick;
 }
 
 /* inserts a brick object into the appropriate colors BST
@@ -39,9 +41,9 @@ function insert(Brick) {
 /* checks whether the legoPile has a brick with the given size and color
 */
 function hasBrick(size, color) {
-var binarySearchTree = find(color);
-findBrick(binarySearchTree, size);
-return findBrick(binarySearchTree, size) == Brick;
+var binarySearchTree = this.findBinaryTree(color);
+findBrick(size, binarySearchTree);
+return findBrick(size, binarySearchTree) != null;
 }
 
 /* returns the binary search tree associated with the color(key)
@@ -50,9 +52,9 @@ function findBinaryTree(key) {
 return this.datastore[key];
 }
 
-/* searches a binary tree for a specific size. if size is found the object is returned
+/* searches a binary tree for a specific size. if size is found the object is returned, if not, null is returned
 */
-function findBrick(searchTree, size) {
+function findBrick(size, searchTree) {
 	if (searchTree.root == null) {
 	return null;
 	} else {
