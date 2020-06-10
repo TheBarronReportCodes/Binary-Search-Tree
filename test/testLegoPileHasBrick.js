@@ -15,7 +15,7 @@ describe('testLegoPileHasBrick', function() {
 	});
 
 	describe('find two bricks in different trees', function() {
-		it('assert that the second brick inserted into each of the specified BST is found', function() {
+		it('assert that the second brick inserted into each of the specified BST is found', function() { 
 			var brick0 = new Brick(60, "green");
 			var brick1 = new Brick(65, "green");
 			var brick2 = new Brick(80, "black");
@@ -26,7 +26,8 @@ describe('testLegoPileHasBrick', function() {
 			pile.insert(brick2);
 			pile.insert(brick3);
 			assert.equal(pile.hasBrick(65, "green"), true);
-			assert.equal(pile.hasBrick(75, "green"), true);
+			assert.equal(pile.hasBrick(75, "black"), true);
 		});
+
 	});
 });
