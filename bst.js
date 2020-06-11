@@ -53,12 +53,25 @@ function insert(data) {
 
 /* returns the total number of Brick objects in the BST
 */
-function count() {
+function count(binaryTree) {
+var counter = 0;
+	if (binaryTree.root != null) {
+	counter = countSubtree(binaryTree.root);
+	}
+	return counter;
 }
 
 /* helper function that counts the nodes in a tree recursively
 */
-function countSubtree() {
+function countSubtree(node) {
+var counter = 1;
+	if (root.left != null) {
+	counter += countSubtree(root.left);
+	}
+	if (root.right != null) {
+	counter += countSubtree(root.right);
+	}
+	return counter;
 }
 
 
