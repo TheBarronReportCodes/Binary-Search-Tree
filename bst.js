@@ -51,4 +51,9 @@ function insert(data) {
 	} 
 }
 
+/* returns the total number of Brick objects in the BST
+*/
+function count() {
+}
+
 

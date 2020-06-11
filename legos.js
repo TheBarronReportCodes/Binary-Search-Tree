@@ -79,6 +79,11 @@ function findBrick(size, searchTree) {
 	}
 }
 
+/* returns the total number of Brick objects in the LegoPile
+*/
+function count() {
+}
+
 
 
 
