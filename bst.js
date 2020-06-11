@@ -21,7 +21,7 @@ return this.data;
 function BST() {
 this.root = null
 this.insert = insert;
-this.count = count;
+this.bstCount = bstCount;
 }
 
 /* Adds a node into a spot on the binary based on the described algorithm
@@ -54,7 +54,7 @@ function insert(data) {
 
 /* returns the total number of Brick objects in the BST
 */
-function count() {
+function bstCount() {
 var counter = 0;
 	if (this.root != null) {
 	counter = countSubtree(this.root);

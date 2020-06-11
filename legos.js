@@ -26,6 +26,7 @@ this.insert = insert;
 this.hasBrick = hasBrick;
 this.findBinaryTree = findBinaryTree;
 this.findBrick = findBrick;
+this.legoPileCount = legoPileCount;
 }
 
 /* inserts a brick object into the appropriate colors BST
@@ -79,17 +80,16 @@ function findBrick(size, searchTree) {
 	}
 }
 
-/* returns the total number of Brick objects in the LegoPile
+/* returns the total number of Brick objects in the LegoPile (sum of count in all BST's)
 */
-function count() {
-
+function legoPileCount() {
+var counter = 0;
+for (var key in this.datastore) {
+counter += this.datastore[key].count();
+}
+return counter;
 }
 
-/* helper function that counts the nodes in a tree recursively
-*/
-function countSubtree(root) {
-
-}
 
 
 

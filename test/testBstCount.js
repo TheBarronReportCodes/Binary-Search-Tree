@@ -11,7 +11,7 @@ describe('testBSTcount', function() {
 		var brick0 = new Brick(50, "red");
 		var tree = new BST();
 		tree.insert(brick0);
-		assert.equal(tree.count(), 1);
+		assert.equal(tree.bstCount(), 1);
 		});
 	});
 
@@ -22,7 +22,7 @@ describe('testBSTcount', function() {
 		var tree = new BST();
 		tree.insert(brick0);
 		tree.insert(brick1);
-		assert.equal(tree.count(), 2);
+		assert.equal(tree.bstCount(), 2);
 		});
     	});
 
@@ -41,7 +41,7 @@ describe('testBSTcount', function() {
 		tree.insert(brick3);
 		tree.insert(brick4);
 		tree.insert(brick5);
-		assert.equal(tree.count(), 6);
+		assert.equal(tree.bstCount(), 6);
 		});
     	});
 });
