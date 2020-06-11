@@ -85,7 +85,7 @@ function findBrick(size, searchTree) {
 function legoPileCount() {
 var counter = 0;
 for (var key in this.datastore) {
-counter += this.datastore[key].count();
+counter += this.datastore[key].bstCount();
 }
 return counter;
 }
