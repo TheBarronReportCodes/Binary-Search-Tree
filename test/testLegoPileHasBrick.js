@@ -30,4 +30,25 @@ describe('testLegoPileHasBrick', function() {
 		});
 
 	});
+
+	describe('find two bricks deep within same tree', function() {
+		it('assert that the two brick inserted into the specified BST is found', function() { 
+			var brick0 = new Brick(60, "green");
+			var brick1 = new Brick(65, "green");
+			var brick2 = new Brick(80, "green");
+			var brick3 = new Brick(75, "green");
+			var brick4 = new Brick(63, "green");
+
+			var pile = new LegoPile();
+			pile.insert(brick0);
+			pile.insert(brick1);
+			pile.insert(brick2);
+			pile.insert(brick3);
+			pile.insert(brick4);
+
+			assert.equal(pile.hasBrick(75, "green"), true);
+			assert.equal(pile.hasBrick(63, "green"), true);
+		});
+
+	});
 });

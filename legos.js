@@ -64,16 +64,12 @@ function findBrick(size, searchTree) {
 			parent = current;
 			if (size < current.data.size) {
 				current = current.left;
-				if (size == current.data.size) {
-					return current.data;
-				} else {
+				if (current == null) {
 					break;
 				}
 			} else if (size > current.data.size) {
 				current = current.right;
-				if (size == current.data.size) {
-					return current.data;
-				} else {
+				if (current == null) {
 					break;
 				}
 			} else if (size == current.data.size) {
