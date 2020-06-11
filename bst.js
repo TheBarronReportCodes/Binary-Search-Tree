@@ -56,4 +56,9 @@ function insert(data) {
 function count() {
 }
 
+/* helper function that counts the nodes in a tree recursively
+*/
+function countSubtree() {
+}
+
 

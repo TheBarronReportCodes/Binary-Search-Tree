@@ -84,6 +84,11 @@ function findBrick(size, searchTree) {
 function count() {
 }
 
+/* helper function that counts the nodes in a tree recursively
+*/
+function countSubtree() {
+}
+
 
 
 
