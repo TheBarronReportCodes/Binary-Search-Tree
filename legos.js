@@ -32,11 +32,7 @@ this.legoPileCount = legoPileCount;
 /* inserts a brick object into the appropriate colors BST
 */
 function insert(Brick) {
-	for (var key in this.datastore) {
-		if (Brick.color == key) {
-		this.datastore[key].insert(Brick);
-		}
-	}
+	this.datastore[Brick.color].insert(Brick);
 }
 
 /* checks whether the legoPile has a brick with the given size and color
